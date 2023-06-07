@@ -1,0 +1,50 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+nav {
+    width: 100%;
+    background-color: #2E323F;
+    color: #FFF;
+}
+
+.nav__list {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.nav__item {
+    margin-left: 1em;  /* May have to put in media query later to stay inline with mobile first design */
+}
+
+.nav__btn {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.hero-section {
+    background-color: #3B4050;
+}
+
+.section-2 {
+    background-color: #6F737F;
+}
+
