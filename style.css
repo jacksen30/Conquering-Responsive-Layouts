@@ -14,9 +14,13 @@ body {
 }
 
 .flex {
-    display: flex;
+    display: block;            /* NOTE THIS IS SET TO BLOCK - NEEDS A MEDIA QUERY OF FLEX FOR LARGER SCREEN SIZES ??? */
     align-items: center;
     justify-content: center;
+}
+
+section {
+    padding: 2rem 0 2rem 0; /* SOME HOW THIS FIXED THE SIDE SCROLL ISSUE AND CONTENT BEEN WIDER THEN VIEWPORT AT MOBILE SIZE */
 }
 
 /* Button Classes */
@@ -39,10 +43,15 @@ body {
 */
 .CTA-btn {
     font-size: 24px;
+    display: inline-block; /* required so that the margin property would work on an <a> tag (inline-element) */ 
+    margin: 1rem 0 1rem 0;
    }
 
 
 /* Sections and Divs */
+h1 , h2, h3 {
+    margin-top: 0;
+}
 
 nav {
     width: 100%;
@@ -73,7 +82,7 @@ nav {
 .hero-section__title {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
-    font-size: 90px;
+    font-size: 50px;
     line-height: 1.05em;
 }
 
@@ -111,5 +120,8 @@ font-family: 'Oswald', sans-serif;
 
 @media (min-width: 700px) {
     
+    .hero-section__title {
+        font-size: 90px;
+    }
 
 }
