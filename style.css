@@ -57,6 +57,11 @@ nav {
     text-transform: uppercase;
 }
 
+/* JUST TO HELP VISUALISE REST OF LAYOUT ON SMALL SCREEN SIZES */
+.nav__list {
+    display: none;
+}
+
 .nav__item {
     margin-left: 1em;  /* May have to put in media query later to stay inline with mobile first design */
 }
@@ -69,10 +74,16 @@ nav {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 90px;
+    line-height: 1.05em;
+}
+
+.hero-section__title--span {
+    color: #A59678;
 }
 
 .hero-section__text {
     font-size: 24px;
+    color: #6F737F;
 }
 
 .section-2 {
@@ -83,11 +94,13 @@ nav {
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 30px;
+    color: #A59678;
 }
 
 .section-2__text {
     font-size: 18px;
 }
+
 
 /* Available Fonts
 
@@ -95,3 +108,8 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Oswald', sans-serif;
 
 */
+
+@media (min-width: 700px) {
+    
+
+}
