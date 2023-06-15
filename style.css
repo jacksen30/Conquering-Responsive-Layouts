@@ -14,13 +14,15 @@ body {
 }
 
 .flex {
-    display: block;            /* NOTE THIS IS SET TO BLOCK - NEEDS A MEDIA QUERY OF FLEX FOR LARGER SCREEN SIZES ??? */
-    align-items: center;
-    justify-content: center;
+    display: block;   /* NOTE THIS IS SET TO BLOCK - NEEDS A MEDIA QUERY OF FLEX FOR LARGER SCREEN SIZES ??? */
 }
 
 section {
     padding: 2rem 0 2rem 0; /* SOME HOW THIS FIXED THE SIDE SCROLL ISSUE AND CONTENT BEEN WIDER THEN VIEWPORT AT MOBILE SIZE */
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Button Classes */
@@ -36,11 +38,7 @@ section {
     text-transform: uppercase;
 }
 
-/*
-.nav__btn {
-    
-}
-*/
+
 .CTA-btn {
     font-size: 24px;
     display: inline-block; /* required so that the margin property would work on an <a> tag (inline-element) */ 
@@ -53,27 +51,71 @@ h1 , h2, h3 {
     margin-top: 0;
 }
 
-nav {
+header {
     width: 100%;
     background-color: #2E323F;
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
+    text-align: left;
+   /* padding: 0.2em 0; */
+   /* display: flex; /* fixed gap between header and hero ? need to think about this more */
+}
+
+.header {
+    padding-top: 1rem;
+    text-align: center;
+    position: relative;
+    
+}
+
+/* header__logo settings are wrong not working ! */
+.header__logo {
+    display: inline;
+}
+
+/* JUST TO HELP VISUALISE REST OF LAYOUT ON SMALL SCREEN SIZES */
+.nav {
+    visibility: hidden; /* HIDING NAV__LIST at mobile size this may become part of tyhe toggle function*/
+    height: 0;
+   }
+
+.nav-toggle {
+    display: inline-block;
+    font-size: 1.25rem;
+    position: absolute; 
+    left: 0;
+    padding-top: 2px;
+}
+
+
+.nav--visible {
+    visibility:visible ;
+    position: relative;
+    height: auto;
+    text-align: center;
+    padding-bottom: 40px;
 }
 
 .nav__list {
     list-style: none;
     text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
-/* JUST TO HELP VISUALISE REST OF LAYOUT ON SMALL SCREEN SIZES */
-.nav__list {
-    display: none;
+nav ul {
+    padding: 0; /* Fixes the default of ul having a margin-left:40px */ 
 }
 
 .nav__item {
-    margin-left: 1em;  /* May have to put in media query later to stay inline with mobile first design */
+   /* margin-left: 1em;  /* May have to put in media query later to stay inline with mobile first design */
 }
+
+.nav__item--btn {
+    margin-top: 1rem;
+}
+
+
 
 .hero-section {
     background-color: #3B4050;

@@ -11,24 +11,31 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Kevin Powell - Conquering Responsive Layouts - Final Challenge</title>
+
+    <script src="https://kit.fontawesome.com/5b0bc60eb6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-
-            <nav>
-                <div class="container flex">
-                    <img src="./img/logo.svg" alt="brand logo" class="nav__logo"></img>
-                    <ul class="nav__list nav__list--primary flex">
-                        <li class="nav__item">home</li>
-                        <li class="nav__item">about</li>
-                        <li class="nav__item">contact</li>
-                    </ul>
-                    <ul class="nav__list  nav__list--secondary flex">
-                        <li class="nav__item">sign in</li>
-                        <li class="nav__item"><a class="btn nav__btn" href="#">sign up</a></li>
-                    </ul>
-                </div>
+        <div class="container flex header header">
+            <button class="nav-toggle" aria-labelledby="open navigation">
+                <i class="fa-solid fa-bars nav__toggle__btn"></i>
+            </button>
+            <a class="header__logo" href="#">
+                <img src="./img/logo.svg" alt="brand logo" ></img>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list nav__list--primary flex">
+                    <li class="nav__item">home</li>
+                    <li class="nav__item">about</li>
+                    <li class="nav__item">contact</li>
+                </ul>
+                <ul class="nav__list  nav__list--secondary flex">
+                    <li class="nav__item">sign in</li>
+                    <li class="nav__item nav__item--btn"><a class="btn nav__btn" href="#">sign up</a></li>
+                </ul>
             </nav>
+        </div>
+        
     </header>
     <main>
         <section class="hero-section">
@@ -87,6 +94,8 @@
 
     </main>
     <footer></footer>
+
+    <script src="main.js"></script>
     
 </body>
 </html>
