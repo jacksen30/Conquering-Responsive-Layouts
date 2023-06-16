@@ -14,7 +14,8 @@ body {
 }
 
 .flex {
-    display: block;   /* NOTE THIS IS SET TO BLOCK - NEEDS A MEDIA QUERY OF FLEX FOR LARGER SCREEN SIZES ??? */
+    display: block;   /* NOTE THIS IS SET TO BLOCK - NEEDS A MEDIA QUERY OF FLEX FOR LARGER SCREEN SIZES */
+    justify-content: space-between;
 }
 
 section {
@@ -23,6 +24,10 @@ section {
 
 img {
     max-width: 100%;
+}
+
+h1 , h2, h3 {
+    margin-top: 0;
 }
 
 /* Button Classes */
@@ -38,6 +43,10 @@ img {
     text-transform: uppercase;
 }
 
+.nav__item--btn {
+    margin-top: 0.6rem;
+    padding: 0.2em 0.8em;
+}
 
 .CTA-btn {
     font-size: 24px;
@@ -45,77 +54,64 @@ img {
     margin: 1rem 0 1rem 0;
    }
 
-
-/* Sections and Divs */
-h1 , h2, h3 {
-    margin-top: 0;
-}
+/* Navigation - Header */
 
 header {
-    width: 100%;
+   /* width: 100%; */
     background-color: #2E323F;
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
-    text-align: left;
-   /* padding: 0.2em 0; */
-   /* display: flex; /* fixed gap between header and hero ? need to think about this more */
 }
 
-.header {
+.header__inner {
     padding-top: 1rem;
     text-align: center;
-    position: relative;
-    
+    position: relative;   
 }
 
-/* header__logo settings are wrong not working ! */
-.header__logo {
-    display: inline;
-}
-
-/* JUST TO HELP VISUALISE REST OF LAYOUT ON SMALL SCREEN SIZES */
 .nav {
-    visibility: hidden; /* HIDING NAV__LIST at mobile size this may become part of tyhe toggle function*/
+    visibility: hidden; /* Hide NAV__LIST at mobile size */
     height: 0;
    }
 
 .nav-toggle {
-    display: inline-block;
+    cursor: pointer;
     font-size: 1.25rem;
     position: absolute; 
     left: 0;
     padding-top: 2px;
+    transition: opacity 250ms ease;
 }
-
 
 .nav--visible {
     visibility:visible ;
-    position: relative;
     height: auto;
-    text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
 }
 
 .nav__list {
     list-style: none;
     text-transform: uppercase;
     font-size: 1.2rem;
+    padding: 0; /* Fixes the default of ul having a margin-left:40px */
 }
 
-nav ul {
-    padding: 0; /* Fixes the default of ul having a margin-left:40px */ 
+.nav__link {
+    color: #FFF;
+    text-decoration: none;
 }
 
-.nav__item {
-   /* margin-left: 1em;  /* May have to put in media query later to stay inline with mobile first design */
+.nav__link:hover,
+.nav__link:focus,
+.nav-toggle:focus,
+.nav-toggle:hover,
+.btn:focus,
+.btn:hover {
+    opacity: 0.65;
 }
 
-.nav__item--btn {
-    margin-top: 1rem;
-}
-
-
+/* Sections and Divs */
 
 .hero-section {
     background-color: #3B4050;
@@ -162,6 +158,43 @@ font-family: 'Oswald', sans-serif;
 
 @media (min-width: 700px) {
     
+    .flex {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+       }
+
+    .nav--visible {
+        padding-bottom: 0px;
+    }
+
+    .nav__list {
+        margin: 0 0;
+        justify-content: space-around;
+    }
+
+    .nav__item {
+        margin-left: 1rem;
+    }
+
+    .nav__item--btn {
+        margin-top: 0;
+    }
+
+    .header-inner {
+        align-content: space-between;
+        justify-content:space-between;
+    }
+
+
+
+
     .hero-section__title {
         font-size: 90px;
     }
