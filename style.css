@@ -15,7 +15,6 @@ body {
 
 .flex {
     display: block;   /* NOTE THIS IS SET TO BLOCK - NEEDS A MEDIA QUERY OF FLEX FOR LARGER SCREEN SIZES */
-    justify-content: space-between;
 }
 
 section {
@@ -160,6 +159,7 @@ font-family: 'Oswald', sans-serif;
     
     .flex {
         display: flex;
+        justify-content: space-between;
     }
 
     .nav-toggle {
@@ -175,28 +175,22 @@ font-family: 'Oswald', sans-serif;
     }
 
     .nav__list {
-        margin: 0 0;
-        justify-content: space-around;
+        margin: 0 0; 
     }
 
     .nav__item {
         margin-left: 1rem;
     }
 
+    .nav__list--primary {
+        justify-self: center;
+    }
+
     .nav__item--btn {
         margin-top: 0;
     }
 
-    .header-inner {
-        align-content: space-between;
-        justify-content:space-between;
-    }
-
-
-
-
     .hero-section__title {
         font-size: 90px;
     }
-
 }
