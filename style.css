@@ -106,6 +106,53 @@ header {
     opacity: 0.65;
 }
 
+/* Navigation - Footer */
+
+footer {
+    background: #3B4050;
+    color: white;
+    width: 100%;
+}
+
+.footer-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 2rem 0 0 0;
+    font-size: 3rem;
+    color: #FFF;
+}
+
+.footer__nav__list {
+    padding: 0 0 1rem 0;
+    margin: 1.8rem 0 0 0;
+    list-style: none;
+    font-size: 1.125rem;
+   /* font-weight: bold; */
+}
+
+.list-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #A59678;
+    font-size: 1.5rem;
+    margin-top: .7em;
+}
+
+.footer__nav__item {
+    margin-top: .7em;
+    color: #6F737F;
+}
+
+.footer__nav__link{
+    color: #6F737F;
+    text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
 /* Sections and Divs */
 
 .hero-section-wrapper {
@@ -189,6 +236,27 @@ font-family: 'Oswald', sans-serif;
 
     .nav__item--btn {
         margin-top: 0;
+    }
+
+    footer {
+        padding: 2rem 0 2rem 0;
+    }
+
+    .footer-title {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    .footer__company-bio {
+        width: 35%;
+    }
+
+    .footer__nav__list {
+        padding: 0 0 1.5rem 0;
+    }
+
+    .list-title {
+        padding: 0 0 0.5rem 0;
     }
 
     .hero-section__title {
