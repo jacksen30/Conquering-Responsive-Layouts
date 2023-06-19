@@ -267,4 +267,12 @@ font-family: 'Oswald', sans-serif;
     .hss {
         align-self: flex-end; /*aligning hero right col */
     }
+
+    .section-2 {
+        text-align: center;
+    }
+
+    .section-2 .col {
+        width: 25%;
+    }
 }
