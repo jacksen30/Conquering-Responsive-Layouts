@@ -213,7 +213,8 @@ font-family: 'Oswald', sans-serif;
 
 */
 
-@media (min-width: 700px) {
+/* changed from the asked for 700px breakpoint */
+@media (min-width: 900px) {
     
     .flex {
         display: flex;
@@ -289,4 +290,48 @@ font-family: 'Oswald', sans-serif;
     .section-2 .col {
         width: 25%;
     }
+
+    .section-3__card-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex: 1; /* ensure that all cards become the same height */
+        width: 30%;
+        justify-content: space-between;
+    }
+
+    .small-card {
+        width: 32%;
+    }
+
+    .flex-s3 {
+        flex-wrap: wrap;
+    }
+    
+}
+
+/* changed from the asked for 1000px breakpoint */
+@media (min-width: 1200px) { 
+
+    .flex-s3 {
+        display: flex;
+        justify-content: space-between;
+    }
+    .section-3__card-wrapper{
+        display: flex;
+        flex-direction: column;
+        flex: 1; /* ensure that all cards become the same height */
+        width: 30%;
+        margin-left: 50px;
+        justify-content: flex-start; /* to stop it inheriting from .flex-s3 and making big gaps between and items spread out other
+                                        the whole parent container height */ 
+    }
+
+    .small-card {
+        width: 100%;
+    }
+
+    .s3t {
+        width: 70%
+    }
+
 }
