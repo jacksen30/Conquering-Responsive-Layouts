@@ -152,7 +152,6 @@ footer {
 }
 
 
-
 /* Sections and Divs */
 
 .hero-section-wrapper {
@@ -165,6 +164,7 @@ footer {
     font-weight: bold;
     font-size: 50px;
     line-height: 1.05em;
+    color: #FFF;
 }
 
 .hero-section__title--span {
@@ -191,6 +191,17 @@ footer {
     font-size: 18px;
 }
 
+.section-3__title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #A59678;
+    font-size: 2.2rem;
+}
+
+.section-3__text {
+    font-size: 1.25rem;
+}
+
 .section-3__card-wrapper{
     display: flex;
     flex-direction: column;
@@ -214,13 +225,13 @@ font-family: 'Oswald', sans-serif;
 */
 
 /* changed from the asked for 700px breakpoint */
-@media (min-width: 900px) {
+@media (min-width: 850px) {
     
     .flex {
         display: flex;
         justify-content: space-between;
     }
-
+    
     .header__inner {
         padding-bottom: 1rem;
     }
@@ -275,12 +286,13 @@ font-family: 'Oswald', sans-serif;
     }
 
     .hero-section__title {
-        font-size: 90px;
-        margin-bottom: 0px;   /* TO ALIGN THE COL'S MUST BE A BETTER WAY */ /* NEED TO RE-LOOK AT ALL MARGINS etc */ 
+        font-size: 70px;
+        margin-bottom: 0px;  /* TO ALIGN THE COL'S MUST BE A BETTER WAY */ /* NEED TO RE-LOOK AT ALL MARGINS etc */
+        margin-right: 1.8rem;   
     }
 
-    .hss {
-        align-self: flex-end; /*aligning hero right col */
+    .col-hero-2 {
+        align-self: flex-end; /*aligning hero right col to bottom of section */   
     }
 
     .section-2 {
@@ -310,7 +322,7 @@ font-family: 'Oswald', sans-serif;
 }
 
 /* changed from the asked for 1000px breakpoint */
-@media (min-width: 1200px) { 
+@media (min-width: 1100px) { 
 
     .flex-s3 {
         display: flex;
