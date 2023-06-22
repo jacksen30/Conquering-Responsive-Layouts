@@ -100,7 +100,11 @@ header {
 .nav__link:hover,
 .nav__link:focus,
 .nav-toggle:focus,
-.nav-toggle:hover {
+.nav-toggle:hover,
+.footer__nav__link:focus,
+.footer__nav__link:hover,
+.btn:focus,
+.btn:hover {
     opacity: 0.65;
 }
 
