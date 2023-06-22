@@ -14,7 +14,7 @@ body {
 }
 
 section {
-    padding: 2rem 0 2rem 0; /* SOME HOW THIS FIXED THE SIDE SCROLL ISSUE AND CONTENT BEEN WIDER THEN VIEWPORT AT MOBILE SIZE */
+    padding: 2.5rem 0;
 }
 
 img {
@@ -100,9 +100,7 @@ header {
 .nav__link:hover,
 .nav__link:focus,
 .nav-toggle:focus,
-.nav-toggle:hover,
-.btn:focus,
-.btn:hover {
+.nav-toggle:hover {
     opacity: 0.65;
 }
 
@@ -156,7 +154,6 @@ footer {
 
 .hero-section-wrapper {
     background-color: #3B4050;
-    padding: 3rem 0;
 }
 
 .hero-section__title {
@@ -189,6 +186,7 @@ footer {
 
 .section-2__text {
     font-size: 18px;
+    line-height: 1.3em;
 }
 
 .section-3__title {
@@ -200,6 +198,7 @@ footer {
 
 .section-3__text {
     font-size: 1.25rem;
+    line-height: 1.4em;
 }
 
 .section-3__card-wrapper{
@@ -214,15 +213,9 @@ footer {
     text-align: center;
     padding: 1.75rem;
     margin: 1rem 0 0 0;
-    
+    line-height: 1.5em;   
 }
 
-/* Available Fonts
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Oswald', sans-serif;
-
-*/
 
 /* changed from the asked for 700px breakpoint */
 @media (min-width: 850px) {
@@ -285,6 +278,10 @@ font-family: 'Oswald', sans-serif;
         padding: 0 0 0.5rem 0;
     }
 
+    section {
+        padding: 4rem 0;
+    }
+
     .hero-section__title {
         font-size: 70px;
         margin-bottom: 0px;  /* TO ALIGN THE COL'S MUST BE A BETTER WAY */ /* NEED TO RE-LOOK AT ALL MARGINS etc */
@@ -328,11 +325,18 @@ font-family: 'Oswald', sans-serif;
         display: flex;
         justify-content: space-between;
     }
+
+    .hero-section-wrapper {
+        padding: 5rem 0 6rem 0;
+    }
+
+    .hero-section__title {
+        font-size: 90px;
+    }
+    
     .section-3__card-wrapper{
-        display: flex;
         flex-direction: column;
         flex: 1; /* ensure that all cards become the same height */
-        width: 30%;
         margin-left: 50px;
         justify-content: flex-start; /* to stop it inheriting from .flex-s3 and making big gaps between and items spread out other
                                         the whole parent container height */ 
@@ -342,7 +346,7 @@ font-family: 'Oswald', sans-serif;
         width: 100%;
     }
 
-    .s3t {
+    .col-s3-1 {
         width: 70%
     }
 
